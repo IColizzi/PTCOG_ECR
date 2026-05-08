@@ -3,45 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PDF Library</title>
+  <title>PDF Demo Site</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 700px;
+      max-width: 800px;
       margin: 40px auto;
       padding: 20px;
-      background: #f7f7f7;
+      background: #f5f7fb;
+      color: #1f2937;
     }
     h1 {
-      text-align: center;
+      margin-bottom: 8px;
+    }
+    p {
+      color: #4b5563;
     }
     .options {
       display: grid;
-      gap: 12px;
-      margin-top: 24px;
+      gap: 14px;
+      margin-top: 28px;
     }
     a {
       display: block;
-      padding: 14px 18px;
+      padding: 16px 18px;
       background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 12px;
       text-decoration: none;
-      color: #222;
+      color: #111827;
       font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     a:hover {
-      background: #eef6ff;
+      background: #eff6ff;
+      border-color: #93c5fd;
+    }
+    code {
+      background: #e5e7eb;
+      padding: 2px 6px;
+      border-radius: 6px;
     }
   </style>
 </head>
 <body>
-  <h1>Select a PDF</h1>
+  <h1>Choose a PDF</h1>
+  <p>This is a simple GitHub Pages example. Put this file in your repo as <code>index.html</code> and keep the PDFs in a folder named <code>pdfs</code>.</p>
 
   <div class="options">
-    <a href="pdfs/option1.pdf" target="_blank">Option 1</a>
-    <a href="pdfs/option2.pdf" target="_blank">Option 2</a>
-    <a href="pdfs/option3.pdf" target="_blank">Option 3</a>
+    <a href="pdfs/report-1.pdf" target="_blank">Open dummy PDF 1</a>
+    <a href="pdfs/report-2.pdf" target="_blank">Open dummy PDF 2</a>
+    <a href="pdfs/report-3.pdf" target="_blank">Open dummy PDF 3</a>
   </div>
 </body>
 </html>
