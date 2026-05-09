@@ -3,66 +3,220 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PDF Demo Site</title>
+  <title>PTCOG ECR Hub</title>
   <style>
+    :root {
+      --bg: #f6f7fb;
+      --surface: #ffffff;
+      --text: #17212b;
+      --muted: #5b6672;
+      --border: #d8dee6;
+      --blue: #00579b;
+      --blue-dark: #003f73;
+      --red: #d62d0f;
+      --red-dark: #b1240b;
+      --green: #1f8f4e;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #f5f7fb;
-      color: #1f2937;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #f8fbff 0%, #f6f7fb 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+    .logo {
+      max-width: 340px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      background: #fff;
     }
     h1 {
-      margin-bottom: 8px;
+      margin: 0 0 10px;
+      font-size: 2rem;
+      color: var(--blue-dark);
     }
-    p {
-      color: #4b5563;
+    .lead {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.02rem;
     }
-    .options {
+    .grid {
       display: grid;
-      gap: 14px;
-      margin-top: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
     }
-    a {
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+      color: var(--blue-dark);
+    }
+    .card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+    .actions {
+      display: grid;
+      gap: 10px;
+    }
+    .btn {
       display: block;
-      padding: 16px 18px;
-      background: white;
-      border: 1px solid #d1d5db;
-      border-radius: 12px;
       text-decoration: none;
-      color: #111827;
+      padding: 13px 15px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: 0.18s ease;
+    }
+    .btn.primary {
+      background: var(--blue);
+      color: #fff;
+    }
+    .btn.primary:hover { background: var(--blue-dark); }
+    .btn.secondary {
+      background: #eef5fb;
+      color: var(--blue-dark);
+      border-color: #c8dced;
+    }
+    .btn.secondary:hover { background: #e2eef9; }
+    .btn.accent {
+      background: var(--red);
+      color: #fff;
+    }
+    .btn.accent:hover { background: var(--red-dark); }
+    .btn.green {
+      background: var(--green);
+      color: #fff;
+    }
+    .btn.green:hover { filter: brightness(0.95); }
+    .pdf-list {
+      display: grid;
+      gap: 10px;
+    }
+    .pdf-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fafcff;
+    }
+    .pdf-item span {
       font-weight: 600;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
-    a:hover {
-      background: #eff6ff;
-      border-color: #93c5fd;
+    .tag {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: #eaf2fb;
+      color: var(--blue-dark);
+      margin-bottom: 10px;
     }
-    code {
-      background: #e5e7eb;
-      padding: 2px 6px;
-      border-radius: 6px;
+    .footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 20px; }
+      .card { padding: 18px; }
+      h1 { font-size: 1.6rem; }
+      .pdf-item { align-items: flex-start; flex-direction: column; }
     }
   </style>
 </head>
 <body>
-  <h1>Choose a PDF/Link</h1>
-  <p>Exapmle Page.</p>
+  <div class="wrap">
+    <section class="hero">
+      <img class="logo" src="ptcog-ecr-logo.png" alt="PTCOG ECR logo" />
+      <h1>PTCOG ECR community hub</h1>
+      <p class="lead">This page keeps the most important actions in one place so visitors can quickly join, update details, explore conference activities, and stay connected without getting lost.</p>
+    </section>
 
-    <div class="options">
-    <a href="pdfs/report-1.pdf" target="_blank">Open dummy PDF 1</a>
-    <a href="pdfs/report-2.pdf" target="_blank">Open dummy PDF 2</a>
-    <a href="pdfs/report-3.pdf" target="_blank">Open dummy PDF 3</a>
-    </div>
+    <section class="grid">
+      <article class="card">
+        <div class="tag">Membership</div>
+        <h2>Join or update</h2>
+        <p>Use these links for registration or to keep your contact details current.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://example.com/new-member" target="_blank" rel="noopener noreferrer">New member link</a>
+          <a class="btn secondary" href="https://example.com/update-email-affiliation" target="_blank" rel="noopener noreferrer">Change email or affiliation</a>
+          <a class="btn secondary" href="https://example.com/ambassador-interest" target="_blank" rel="noopener noreferrer">Become an ambassador</a>
+        </div>
+      </article>
 
-    <div style="margin-top:30px;">
-    <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
-        target="_blank"
-        style="display:inline-block;padding:14px 20px;background:#16a34a;color:white;
-                text-decoration:none;border-radius:10px;font-weight:600;">
-        Registration form
-    </a>
-    </div>
+      <article class="card">
+        <div class="tag">Community</div>
+        <h2>Stay connected</h2>
+        <p>Point people to the channels where they can follow updates and interact with the network.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://example.com/whatsapp-community" target="_blank" rel="noopener noreferrer">WhatsApp community</a>
+          <a class="btn secondary" href="https://example.com/linkedin" target="_blank" rel="noopener noreferrer">Follow us on LinkedIn</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Survey</div>
+        <h2>Conference survey</h2>
+        <p>Place the coffee incentive here so it stands out and stays easy to find.</p>
+        <div class="actions">
+          <a class="btn green" href="https://example.com/survey" target="_blank" rel="noopener noreferrer">Fill the survey to get free coffee</a>
+        </div>
+      </article>
+
+      <article class="card" style="grid-column: 1 / -1;">
+        <div class="tag">Conference activities</div>
+        <h2>PDF information pack</h2>
+        <p>Keep all downloadable conference documents together in one section so visitors know exactly where to find practical details.</p>
+        <div class="pdf-list">
+          <div class="pdf-item">
+            <span>General overview of the activities</span>
+            <a class="btn accent" href="pdfs/general-overview.pdf" target="_blank">Open PDF</a>
+          </div>
+          <div class="pdf-item">
+            <span>Mentor lunch 1</span>
+            <a class="btn accent" href="pdfs/mentor-lunch-1.pdf" target="_blank">Open PDF</a>
+          </div>
+          <div class="pdf-item">
+            <span>Mentor lunch 2</span>
+            <a class="btn accent" href="pdfs/mentor-lunch-2.pdf" target="_blank">Open PDF</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <p class="footer">Replace the example links with your real URLs and add the three PDF files inside a folder named <strong>pdfs</strong>.</p>
+  </div>
 </body>
 </html>
