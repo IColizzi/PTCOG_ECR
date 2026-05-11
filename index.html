@@ -19,7 +19,9 @@
       --shadow: 0 10px 30px rgba(0,0,0,0.08);
       --radius: 18px;
     }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -27,11 +29,13 @@
       color: var(--text);
       line-height: 1.5;
     }
+
     .wrap {
       max-width: 1080px;
       margin: 0 auto;
       padding: 24px;
     }
+
     .hero {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -40,6 +44,7 @@
       box-shadow: var(--shadow);
       margin-bottom: 24px;
     }
+
     .logo {
       max-width: 340px;
       width: 100%;
@@ -48,22 +53,26 @@
       border-radius: 12px;
       background: #fff;
     }
+
     h1 {
       margin: 0 0 10px;
       font-size: 2rem;
       color: var(--blue-dark);
     }
+
     .lead {
       margin: 0;
       max-width: 760px;
       color: var(--muted);
       font-size: 1.02rem;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 18px;
     }
+
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -71,71 +80,76 @@
       padding: 22px;
       box-shadow: var(--shadow);
     }
+
     .card h2 {
       margin: 0 0 8px;
       font-size: 1.2rem;
       color: var(--blue-dark);
     }
+
     .card p {
       margin: 0 0 16px;
       color: var(--muted);
       font-size: 0.97rem;
     }
+
     .actions {
       display: grid;
       gap: 10px;
     }
+
     .btn {
-      display: block;
+      display: inline-block;
       text-decoration: none;
       padding: 13px 15px;
       border-radius: 12px;
       font-weight: 700;
       border: 1px solid transparent;
       transition: 0.18s ease;
+      text-align: center;
     }
+
     .btn.primary {
       background: var(--blue);
       color: #fff;
     }
+
     .btn.primary:hover { background: var(--blue-dark); }
+
     .btn.secondary {
       background: #eef5fb;
       color: var(--blue-dark);
       border-color: #c8dced;
     }
+
     .btn.secondary:hover { background: #e2eef9; }
+
     .btn.accent {
       background: var(--red);
       color: #fff;
     }
+
     .btn.accent:hover { background: var(--red-dark); }
+
     .btn.green {
       background: var(--green);
       color: #fff;
     }
+
     .btn.green:hover { filter: brightness(0.95); }
+
     .pdf-list {
       display: grid;
       gap: 10px;
     }
-    .pdf-item-only {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: #fafcff;
-    }
+
     .pdf-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 12px;
       padding: 12px 14px;
-      border: 1px solid #d8dee6;
+      border: 1px solid var(--border);
       border-radius: 12px;
       background: #fafcff;
     }
@@ -145,9 +159,11 @@
       gap: 10px;
       flex-wrap: wrap;
     }
+
     .pdf-item span {
       font-weight: 600;
     }
+
     .tag {
       display: inline-block;
       padding: 4px 9px;
@@ -158,17 +174,22 @@
       color: var(--blue-dark);
       margin-bottom: 10px;
     }
+
     .footer {
       margin-top: 24px;
       color: var(--muted);
       font-size: 0.92rem;
       text-align: center;
     }
+
     @media (max-width: 640px) {
       .hero { padding: 20px; }
       .card { padding: 18px; }
       h1 { font-size: 1.6rem; }
-      .pdf-item { align-items: flex-start; flex-direction: column; }
+      .pdf-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -177,7 +198,9 @@
     <section class="hero">
       <img class="logo" src="ptcog-ecr-logo.png" alt="PTCOG ECR logo" />
       <h1>PTCOG ECR community</h1>
-      <p class="lead">The PTCOG ECR Subcommittee represents and supports early-career researchers and practitioners within the PTCOG community. It fosters international collaboration, provides networking opportunities, and promotes the professional development of the next generation of experts in particle therapy.</p>
+      <p class="lead">
+        The PTCOG ECR Subcommittee represents and supports early-career researchers and practitioners within the PTCOG community. It fosters international collaboration, provides networking opportunities, and promotes the professional development of the next generation of experts in particle therapy.
+      </p>
     </section>
 
     <section class="grid">
@@ -195,7 +218,7 @@
       <article class="card">
         <div class="tag">Community</div>
         <h2>Stay connected</h2>
-        <p>Join our wahtsapp community and follow us on linkedin!</p>
+        <p>Join our WhatsApp community and follow us on LinkedIn!</p>
         <div class="actions">
           <a class="btn primary" href="https://chat.whatsapp.com/HluCdGRrZZJ6WPFZGQm5Ne" target="_blank" rel="noopener noreferrer">WhatsApp community</a>
           <a class="btn secondary" href="https://www.linkedin.com/company/ptcog-ecr" target="_blank" rel="noopener noreferrer">Follow us on LinkedIn</a>
@@ -205,7 +228,7 @@
       <article class="card">
         <div class="tag">Survey</div>
         <h2>Share Your PhD Experience in Particle Therapy!</h2>
-        <p>If you are doing or have completed your PhD in the past 10 years, we’d love your input. The survey is anonymous, takes just ~10 minutes, and your insights will help improve the PhD journey for future researchers</p>
+        <p>If you are doing or have completed your PhD in the past 10 years, we’d love your input. The survey is anonymous, takes just ~10 minutes, and your insights will help improve the PhD journey for future researchers.</p>
         <div class="actions">
           <a class="btn green" href="https://forms.fillout.com/t/rpJmtk7PcHus" target="_blank" rel="noopener noreferrer">Fill the survey to get free coffee</a>
         </div>
@@ -214,32 +237,31 @@
       <article class="card" style="grid-column: 1 / -1;">
         <div class="tag">Conference activities</div>
         <h2>Don’t miss our activities throughout PTCOG 64!</h2>
-        <p>Here you can find all relevant information and registration links</p>
+        <p>Here you can find all relevant information and registration links.</p>
         <div class="pdf-list">
-          <div class="pdf-item-only">
+          <div class="pdf-item">
             <span>General overview of the activities</span>
-            <a class="btn accent" href="pdfs/Flyer of events at PTCOG 64 - vertical.pdf" target="_blank">Flyer</a>
+            <a class="btn accent" href="pdfs/Flyer of events at PTCOG 64 - vertical.pdf" target="_blank" rel="noopener noreferrer">Flyer</a>
           </div>
+
           <div class="pdf-item">
             <span>ECR Connecting Lunch: How to get involved in PTCOG</span>
             <div class="pdf-actions">
-              <a class="btn accent" href="pdfs/mentor-lunch-1.pdf" target="_blank">Flyer</a>
+              <a class="btn accent" href="pdfs/mentor-lunch-1.pdf" target="_blank" rel="noopener noreferrer">Flyer</a>
               <a class="btn secondary" href="https://forms.gle/2wyEDNgpnaFjVghj8" target="_blank" rel="noopener noreferrer">Register</a>
             </div>
           </div>
+
           <div class="pdf-item">
-            <span>ECR Mentor Lunch: Unusual career paths </span>
-            <div class="pdf-actions"> 
-             <a class="btn accent" href="pdfs/mentor-lunch-2.pdf" target="_blank">Flyer</a>
-             <a class="btn secondary" href="https://forms.gle/ynrn3ktJ32vP8EeC9" target="_blank" rel="noopener noreferrer">
-                Register
-              </a>
+            <span>ECR Mentor Lunch: Unusual career paths</span>
+            <div class="pdf-actions">
+              <a class="btn accent" href="pdfs/mentor-lunch-2.pdf" target="_blank" rel="noopener noreferrer">Flyer</a>
+              <a class="btn secondary" href="https://forms.gle/ynrn3ktJ32vP8EeC9" target="_blank" rel="noopener noreferrer">Register</a>
             </div>
           </div>
         </div>
       </article>
     </section>
-
-   </div>
+  </div>
 </body>
 </html>
